@@ -1,0 +1,36 @@
+//typography
+@mixin typography_h1 {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin typography_body {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin typography_label {
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.typography_h1 {
+  @include typography_h1
+}
+
+.typography_body {
+  @include typography_body
+}
+
+.typography_label {
+  @include typography_label
+}
