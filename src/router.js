@@ -5,7 +5,7 @@ export const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/user-additions',
             name: 'Index',
             component: Index,
             meta: {layout: 'main'}
@@ -16,6 +16,7 @@ export const router = createRouter({
             return {
                 el: to.hash,
                 behavior: 'smooth',
+                top: 60,
             }
         }
     },

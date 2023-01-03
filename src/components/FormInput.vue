@@ -82,7 +82,7 @@
                @focus="props.type === 'tel' ? checkInput() : ''"
         />
         <span class="input__label">{{ props.placeholder }}</span>
-        <span class="input__helper input__helper_error">{{ errors[0] }}</span>
+        <span class="input__helper input__helper_error" v-if="errors[0]">{{ errors[0] }}</span>
         <span class="input__helper" v-if="!v$.$error">
             {{ props.helper }}
         </span>
@@ -135,9 +135,11 @@
             position: relative;
             max-width: 380px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
-        /*text under imput*/
+        /*text under input*/
         &__helper {
             margin-left: 16px;
             margin-top: 4px;
